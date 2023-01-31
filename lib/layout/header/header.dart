@@ -51,14 +51,14 @@ class Header extends StatelessWidget with PreferredSizeWidget {
                       const Spacer(
                         flex: 1,
                       ),
-                      TextButton(
-                          onPressed: () => controller.scrollTo(
-                              index: PageIndices.about.index,
-                              duration: _scollDuration),
-                          child: Text(
-                            "About",
-                            style: purpleOrbitonMedium,
-                          )),
+                      // TextButton(
+                      //     onPressed: () => controller.scrollTo(
+                      //         index: PageIndices.about.index,
+                      //         duration: _scollDuration),
+                      //     child: Text(
+                      //       "About",
+                      //       style: purpleOrbitonMedium,
+                      //     )),
                       TextButton(
                           onPressed: () => controller.scrollTo(
                               index: PageIndices.skills.index,
@@ -75,14 +75,14 @@ class Header extends StatelessWidget with PreferredSizeWidget {
                             "Experience",
                             style: purpleOrbitonMedium,
                           )),
-                      TextButton(
-                          onPressed: () => controller.scrollTo(
-                              index: PageIndices.contact.index,
-                              duration: _scollDuration),
-                          child: Text(
-                            "Contact",
-                            style: purpleOrbitonMedium,
-                          )),
+                      // TextButton(
+                      //     onPressed: () => controller.scrollTo(
+                      //         index: PageIndices.contact.index,
+                      //         duration: _scollDuration),
+                      //     child: Text(
+                      //       "Contact",
+                      //       style: purpleOrbitonMedium,
+                      //     )),
                     ],
                   ),
                 )),
