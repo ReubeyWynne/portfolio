@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reubey_portfolio/layout/header/header.dart';
 import 'package:reubey_portfolio/pages/landing/landing_content.dart';
 import 'package:reubey_portfolio/pages/skills/skills_page.dart';
+import 'package:reubey_portfolio/style/colours.dart';
 
 class LandingPage extends StatelessWidget {
   const LandingPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class LandingPage extends StatelessWidget {
         appBar: const Header(),
         extendBodyBehindAppBar: true,
         body: Container(
-          color: const Color.fromARGB(255, 19, 20, 24),
+          color: SiteColours.background,
           height: MediaQuery.of(context).size.height,
           child: ListView(
             children: [

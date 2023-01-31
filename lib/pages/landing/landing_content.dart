@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:reubey_portfolio/style/colours.dart';
 import 'package:reubey_portfolio/style/text_styles.dart';
 import 'dart:html' as html;
 
@@ -23,7 +24,7 @@ class LandingContent extends StatelessWidget {
           Expanded(
             child: Center(
               child: Card(
-                color: Colors.blueGrey.shade900,
+                color: SiteColours.backgroundVeryLight,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30000),
                 ),
@@ -70,7 +71,7 @@ class LandingContent extends StatelessWidget {
                   ),
                   Text(
                     "\nI've been building high quality professional applications for 7+ years, and programming since I wrote Pong for my Wii using DevKitPPC aged 11.\n\nWhen I'm not writing code, I'm a wannabe artist, Queer activist, and occasional philosopher.\n",
-                    style: purpleOrbitonSmall,
+                    style: purpleRobotoSmall,
                   ),
                   Row(
                     children: [
@@ -82,10 +83,10 @@ class LandingContent extends StatelessWidget {
                                   "https://www.linkedin.com/in/reubey-watkins-9665a6125/",
                                   "LinkedIn");
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Ionicons.logo_linkedin,
                               size: 50,
-                              color: Colors.purple.shade200,
+                              color: SiteColours.purpleLight,
                             )),
                       ),
                       Padding(
@@ -95,10 +96,10 @@ class LandingContent extends StatelessWidget {
                               html.window.open(
                                   'https://github.com/ReubeyWynne', "GitHub");
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Ionicons.logo_github,
                               size: 50,
-                              color: Colors.purple.shade200,
+                              color: SiteColours.purpleLight,
                             )),
                       ),
                       Padding(
@@ -108,10 +109,10 @@ class LandingContent extends StatelessWidget {
                               html.window
                                   .open('mailto:reubeycw@gmail.com', "Email");
                             },
-                            icon: Icon(
+                            icon: const Icon(
                               Ionicons.mail,
                               size: 50,
-                              color: Colors.purple.shade200,
+                              color: SiteColours.purpleLight,
                             )),
                       ),
                     ],

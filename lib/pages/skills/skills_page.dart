@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:reubey_portfolio/data/skills.dart';
+import 'package:reubey_portfolio/style/colours.dart';
 import 'package:reubey_portfolio/style/text_styles.dart';
 
 class SkillsPage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _SkillsPageState extends State<SkillsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: const Color.fromARGB(255, 23, 24, 29),
+      color: SiteColours.backgroundLight,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: const EdgeInsets.all(32.0),
@@ -62,7 +63,7 @@ class _SkillsPageState extends State<SkillsPage> {
                                 duration: const Duration(milliseconds: 700));
                           },
                           child: Card(
-                            color: const Color.fromARGB(255, 44, 47, 56),
+                            color: SiteColours.backgroundVeryLight,
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Image.asset(

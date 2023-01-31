@@ -1,6 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:reubey_portfolio/style/colours.dart';
 import 'package:reubey_portfolio/style/text_styles.dart';
 
 class Header extends StatelessWidget with PreferredSizeWidget {
@@ -16,7 +16,7 @@ class Header extends StatelessWidget with PreferredSizeWidget {
     return MediaQuery.of(context).size.aspectRatio < .9
         ? AppBar(
             toolbarHeight: 100,
-            backgroundColor: const Color.fromARGB(180, 19, 20, 24),
+            backgroundColor: SiteColours.background.withOpacity(.6),
             title: DefaultTextStyle(
               style: purpleOrbitonLarge,
               child:
@@ -29,7 +29,7 @@ class Header extends StatelessWidget with PreferredSizeWidget {
             ),
           )
         : Container(
-            color: const Color.fromARGB(180, 19, 20, 24),
+            color: SiteColours.background.withOpacity(.6),
             child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: DefaultTextStyle(
