@@ -15,6 +15,7 @@ class Header extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return MediaQuery.of(context).size.aspectRatio < .9
         ? AppBar(
+            elevation: 0,
             toolbarHeight: 100,
             backgroundColor: SiteColours.background.withOpacity(.6),
             title: DefaultTextStyle(
