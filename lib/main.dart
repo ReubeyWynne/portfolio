@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Reubey Wynne - Fullstack Developer',
       color: Colors.blueGrey.shade900,
       builder: (context, child) => ResponsiveWrapper.builder(child,
           maxWidth: 5000,
