@@ -18,7 +18,7 @@ class Footer extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              "© Reubey Watkins 2023",
+              "Not-© Reubey Watkins 2023",
               style: purpleOrbitonSmall,
             ),
           ),
