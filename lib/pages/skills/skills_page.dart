@@ -89,9 +89,11 @@ class _SkillsPageState extends State<SkillsPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "${skills[centeredIndex].name} - ${skills[centeredIndex].yearsExperience} Years Experience",
-                style: purpleOrbitonMedium,
+              SelectionArea(
+                child: Text(
+                  "${skills[centeredIndex].name} - ${skills[centeredIndex].yearsExperience} Years Experience",
+                  style: purpleOrbitonMedium,
+                ),
               ),
               BlinkingCursor(style: purpleOrbitonMedium)
             ],
@@ -102,10 +104,12 @@ class _SkillsPageState extends State<SkillsPage> {
           child: Center(
             child: ConstrainedBox(
               constraints: BoxConstraints.loose(const Size.fromWidth(1000)),
-              child: Text(
-                skills[centeredIndex].description,
-                style: purpleRobotoSmall,
-                textAlign: TextAlign.center,
+              child: SelectionArea(
+                child: Text(
+                  skills[centeredIndex].description,
+                  style: purpleRobotoSmall,
+                  textAlign: TextAlign.center,
+                ),
               ),
             ),
           ),

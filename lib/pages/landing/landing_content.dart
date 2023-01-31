@@ -45,9 +45,11 @@ class LandingContent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "Hi, I'm Reubey!",
-                    style: purpleOrbitonLarge,
+                  SelectionArea(
+                    child: Text(
+                      "Hi, I'm Reubey!",
+                      style: purpleOrbitonLarge,
+                    ),
                   ),
                   DefaultTextStyle(
                     style: purpleOrbitonMedium,
@@ -69,9 +71,11 @@ class LandingContent extends StatelessWidget {
                               curve: Curves.easeInOutCirc),
                         ]),
                   ),
-                  Text(
-                    "\nI've been building high quality professional applications for 7+ years, and programming since I wrote Pong for my Wii using DevKitPPC aged 11.\n\nWhen I'm not writing code, I'm a wannabe artist, Queer activist, and occasional philosopher.\n",
-                    style: purpleRobotoSmall,
+                  SelectionArea(
+                    child: Text(
+                      "\nI've been building high quality professional applications for 7+ years, and programming since I wrote Pong for my Wii using DevKitPPC aged 11.\n\nWhen I'm not writing code, I'm a wannabe artist, Queer activist, and occasional philosopher.\n",
+                      style: purpleRobotoSmall,
+                    ),
                   ),
                   Row(
                     children: [
