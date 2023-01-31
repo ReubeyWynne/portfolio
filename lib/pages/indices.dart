@@ -1,1 +1,1 @@
-enum PageIndices { landing, skills, experience, about, contact }
+enum PageIndices { landing, skills, experience, about, contact, footer }
