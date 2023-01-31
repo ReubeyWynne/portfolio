@@ -104,10 +104,13 @@ class _SkillsPageState extends State<SkillsPage> {
         Padding(
           padding: const EdgeInsets.all(32.0),
           child: Center(
-            child: Text(
-              skills[centeredIndex].description,
-              style: purpleRobotoSmall,
-              textAlign: TextAlign.center,
+            child: ConstrainedBox(
+              constraints: BoxConstraints.loose(const Size.fromWidth(1000)),
+              child: Text(
+                skills[centeredIndex].description,
+                style: purpleRobotoSmall,
+                textAlign: TextAlign.center,
+              ),
             ),
           ),
         ),
