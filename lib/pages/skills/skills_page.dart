@@ -18,6 +18,7 @@ class _SkillsPageState extends State<SkillsPage> {
   int centeredIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final viewHeight = MediaQuery.of(context).size.height;
     return Container(
       color: SiteColours.backgroundShade2,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -29,11 +30,11 @@ class _SkillsPageState extends State<SkillsPage> {
           ),
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * .4,
+          height: viewHeight * .4,
           child: InfiniteCarousel.builder(
               controller: _carouselController,
               itemCount: skills.length,
-              itemExtent: MediaQuery.of(context).size.height * .35,
+              itemExtent: viewHeight * .35,
               scrollBehavior: ScrollConfiguration.of(context).copyWith(
                 dragDevices: {
                   // Allows to swipe in web browsers
@@ -52,11 +53,11 @@ class _SkillsPageState extends State<SkillsPage> {
                   child: Center(
                     child: SizedBox(
                       height: itemIndex == centeredIndex
-                          ? MediaQuery.of(context).size.height * .35
-                          : MediaQuery.of(context).size.height * .25,
+                          ? viewHeight * .35
+                          : viewHeight * .25,
                       width: itemIndex == centeredIndex
-                          ? MediaQuery.of(context).size.height * .35
-                          : MediaQuery.of(context).size.height * .25,
+                          ? viewHeight * .35
+                          : viewHeight * .25,
                       child: GestureDetector(
                           onTap: () {
                             _carouselController.animateToItem(realIndex,
