@@ -24,7 +24,7 @@ class LandingContent extends StatelessWidget {
           Expanded(
             child: Center(
               child: Card(
-                color: SiteColours.backgroundVeryLight,
+                color: SiteColours.backgroundShade3,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30000),
                 ),

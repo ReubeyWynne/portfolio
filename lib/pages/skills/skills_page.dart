@@ -19,7 +19,7 @@ class _SkillsPageState extends State<SkillsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: SiteColours.backgroundLight,
+      color: SiteColours.backgroundShade2,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: const EdgeInsets.all(32.0),
@@ -63,7 +63,7 @@ class _SkillsPageState extends State<SkillsPage> {
                                 duration: const Duration(milliseconds: 700));
                           },
                           child: Card(
-                            color: SiteColours.backgroundVeryLight,
+                            color: SiteColours.backgroundShade3,
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Image.asset(
