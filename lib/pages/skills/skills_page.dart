@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_carousel/infinite_carousel.dart';
 import 'package:reubey_portfolio/data/skills.dart';
+import 'package:reubey_portfolio/shared_widgets/blinking_cursor.dart';
 import 'package:reubey_portfolio/style/colours.dart';
 import 'package:reubey_portfolio/style/text_styles.dart';
 
@@ -24,9 +25,14 @@ class _SkillsPageState extends State<SkillsPage> {
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Padding(
           padding: const EdgeInsets.all(32.0),
-          child: Text(
-            "Skills_",
-            style: purpleOrbitonLarge,
+          child: Row(
+            children: [
+              Text(
+                "Skills",
+                style: purpleOrbitonLarge,
+              ),
+              BlinkingCursor(style: purpleOrbitonLarge)
+            ],
           ),
         ),
         SizedBox(
@@ -87,15 +93,7 @@ class _SkillsPageState extends State<SkillsPage> {
                 "${skills[centeredIndex].name} - ${skills[centeredIndex].yearsExperience} Years Experience",
                 style: purpleOrbitonMedium,
               ),
-              AnimatedTextKit(
-                pause: Duration.zero,
-                repeatForever: true,
-                animatedTexts: [
-                  TypewriterAnimatedText("",
-                      textStyle: purpleOrbitonMedium,
-                      speed: const Duration(milliseconds: 500))
-                ],
-              )
+              BlinkingCursor(style: purpleOrbitonMedium)
             ],
           ),
         ),
