@@ -80,25 +80,23 @@ class _SkillsPageState extends State<SkillsPage> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 32.0),
-          child: Center(
-            child: AnimatedTextKit(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "${skills[centeredIndex].name} - ${skills[centeredIndex].yearsExperience} Years Experience",
+                style: purpleOrbitonMedium,
+              ),
+              AnimatedTextKit(
+                pause: Duration.zero,
                 repeatForever: true,
-                pause: const Duration(milliseconds: 10),
                 animatedTexts: [
-                  ColorizeAnimatedText(
-                    "${skills[centeredIndex].yearsExperience} Years Experience",
-                    textStyle: purpleOrbitonMedium,
-                    colors: [
-                      Colors.purple.shade400,
-                      Colors.purple.shade200,
-                      Colors.purple.shade50,
-                      Colors.orange.shade100,
-                      Colors.orange.shade300,
-                    ],
-                    speed: const Duration(milliseconds: 200),
-                    textAlign: TextAlign.center,
-                  )
-                ]),
+                  TypewriterAnimatedText("",
+                      textStyle: purpleOrbitonMedium,
+                      speed: const Duration(milliseconds: 500))
+                ],
+              )
+            ],
           ),
         ),
         Padding(
