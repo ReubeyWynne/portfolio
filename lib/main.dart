@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
             const ResponsiveBreakpoint.resize(1920, name: "Widecreen")
           ],
           background: Container(color: const Color(0xFFF5F5F5))),
-      home: const LandingPage(),
+      home: LandingPage(),
     );
   }
 }

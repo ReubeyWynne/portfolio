@@ -1,16 +1,19 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:reubey_portfolio/pages/indices.dart';
 import 'package:reubey_portfolio/style/colours.dart';
 import 'package:reubey_portfolio/style/text_styles.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class Header extends StatelessWidget with PreferredSizeWidget {
-  const Header({Key? key})
+  const Header({Key? key, required this.controller})
       : preferredSize = const Size.fromHeight(100),
         super(key: key);
 
+  final ItemScrollController controller;
   @override
   final Size preferredSize;
-
+  final _scollDuration = const Duration(milliseconds: 200);
   @override
   Widget build(BuildContext context) {
     return MediaQuery.of(context).size.aspectRatio < .9
@@ -49,31 +52,33 @@ class Header extends StatelessWidget with PreferredSizeWidget {
                         flex: 1,
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => controller.scrollTo(
+                              index: PageIndices.about.index,
+                              duration: _scollDuration),
                           child: Text(
                             "About",
                             style: purpleOrbitonMedium,
                           )),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => controller.scrollTo(
+                              index: PageIndices.skills.index,
+                              duration: _scollDuration),
                           child: Text(
                             "Skills",
                             style: purpleOrbitonMedium,
                           )),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => controller.scrollTo(
+                              index: PageIndices.experience.index,
+                              duration: _scollDuration),
                           child: Text(
                             "Experience",
                             style: purpleOrbitonMedium,
                           )),
                       TextButton(
-                          onPressed: () {},
-                          child: Text(
-                            "Interests",
-                            style: purpleOrbitonMedium,
-                          )),
-                      TextButton(
-                          onPressed: () {},
+                          onPressed: () => controller.scrollTo(
+                              index: PageIndices.contact.index,
+                              duration: _scollDuration),
                           child: Text(
                             "Contact",
                             style: purpleOrbitonMedium,
